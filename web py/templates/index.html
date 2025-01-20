@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra vi phạm giao thông</title>
+</head>
+<body>
+    <h1>Kiểm Tra Vi Phạm Giao Thông</h1>
+    <form method="POST" action="/">
+        <label for="bienso">Biển số xe:</label>
+        <input type="text" name="bienso" value="{{ request.form.get('bienso', '') }}" required>
+        <button type="submit">Kiểm tra</button>
+    </form>
+
+    {% if result %}
+        <h3>Kết quả vi phạm:</h3>
+        {% if result == "Không tìm thấy vi phạm cho biển số này." %}
+            <p>{{ result }}</p>
+        {% else %}
+            <ul>
+                {% for violation in result %}
+                    <li>
+                        <strong>Thông tin vi phạm:</strong><br>
+                        {% for key, value in violation.items() %}
+                            <strong>{{ key }}:</strong> {{ value }}<br>
+                        {% endfor %}
+                    </li>
+                    <hr>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
