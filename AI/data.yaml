@@ -1,14 +1,14 @@
-train: ../train/images
-val: ../valid/images
-test: ../test/images
+train: C:/Users/CLIENT/Desktop/DACN/DACN/AI/train
+val: C:/Users/CLIENT/Desktop/DACN/DACN/AI/valid
+test: C:/Users/CLIENT/Desktop/DACN/DACN/AI/test
 
 nc: 1
 names: ['bienso']
 
-roboflow:
-  workspace: thang-suqhi
-  project: tim-bien-so
-  version: 1
-  license: CC BY 4.0
-  url: https://universe.roboflow.com/thang-suqhi/tim-bien-so/dataset/1
+# roboflow:
+#   workspace: thang-suqhi
+#   project: tim-bien-so
+#   version: 1
+#   license: CC BY 4.0
+#   url: https://universe.roboflow.com/thang-suqhi/tim-bien-so/dataset/1
   

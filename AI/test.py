@@ -4,7 +4,7 @@ import easyocr
 reader = easyocr.Reader(['vi', 'en'])  # 'vi' cho tiếng Việt, 'en' cho tiếng Anh
 
 # Sử dụng reader để nhận diện văn bản từ một hình ảnh
-image_path = 'download (3).jpg'
+image_path = r'C:\Users\CLIENT\Desktop\DACN\DACN\AI\download (7).jpg'
 results = reader.readtext(image_path)
 
 # In ra văn bản nhận diện được

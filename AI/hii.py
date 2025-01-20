@@ -3,7 +3,7 @@ import cv2
 import easyocr
 
 # Tải mô hình YOLOv8 đã huấn luyện
-model = YOLO(r'C:\Users\ADMIN\Desktop\AI\runs\detect\train\weights\best.pt')  # Thay 'best.pt' bằng đường dẫn đến file mô hình của bạn
+model = YOLO(r'C:\Users\CLIENT\Desktop\DACN\DACN\AI\runs\detect\train\weights\best.pt')  # Thay 'best.pt' bằng đường dẫn đến file mô hình của bạn
 
 # Khởi tạo đối tượng EasyOCR
 reader = easyocr.Reader(['vi', 'en'])  # 'vi' cho tiếng Việt, 'en' cho tiếng Anh
@@ -62,5 +62,5 @@ def detect_and_read_license_plate(image_path):
     cv2.destroyAllWindows()
 
 # Đường dẫn ảnh
-image_path = 'images (2).jpg'  # Thay bằng đường dẫn ảnh của bạn
+image_path = r'C:\Users\CLIENT\Desktop\DACN\DACN\AI\images (2).jpg'  # Thay bằng đường dẫn ảnh của bạn
 detect_and_read_license_plate(image_path)
